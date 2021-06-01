@@ -43,22 +43,29 @@
 8. Выйдем из системы командой "exit" и зайдем заново 
 9. Запустим процедуру в фоновом режиме и предусмотрим ее защиту от прерывания.
 ![Screenshot](/lab2-стукошин/Screenshot_9.png)
-10. Выведим листинг характеристик процессов
+10. Выведим листинг характеристик процессов [root@localgost stukoshin]# ps -f1
 ![Screenshot](/lab2-стукошин/Screenshot_10.png)
-11. Завершим выполнение процесса процедуры сигналом "-9":
+11. Завершим выполнение процесса процедуры сигналом "-9": [root@localgost stukoshin]#kill -9 1276
+[root@localgost stukoshin]#ps -fl
 ![Screenshot](/lab2-стукошин/Screenshot_11.png)
 12. Запустим процедуру в фоновом режиме а затем переведем ее в интерактивный режим.
+[root@localgost stukoshin]#python s.py &
 ![Screenshot](/lab2-стукошин/Screenshot_12.png)
+[root@localgost stukoshin]#fg
 ![Screenshot](/lab2-стукошин/Screenshot_13.png)
 13. Приостановим выполнение процесса сочетанием клавиш Ctrl + z. 
+[root@localgost stukoshin]#fg
 ![Screenshot](/lab2-стукошин/Screenshot_13.png)
+[root@localgost stukoshin]#ps -fl
 ![Screenshot](/lab2-стукошин/Screenshot_14.png)
 14. Переведем процедуру в интерактивный режим:
-[root@localgost dimausenko]#fg 
+[root@localgost stukoshin]#fg
 ```sh
 python s.py
 ```
-15. Завершим выполнение процесса с помощью команды kill. 
+15. Завершим выполнение процесса с помощью команды kill.
+[root@localgost stukoshin]#kill -9 1281
+[root@localgost stukoshin]#ps -fl
 ![Screenshot](/lab2-стукошин/Screenshot_15.png)
 
 Вывод: В ходе лабораторной работы были изучены команды для работы с процессами в операционной системе Linux, а так же проведена работа с текстовым редактором vi.
